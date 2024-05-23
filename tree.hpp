@@ -20,7 +20,7 @@ public:
     void insert(int key);
     node *removeNode(int key); // ainda nao implementei
     node *minValueNode(node *node); // ainda nao implementei
-    node* searchRecursive(int key);
+    node* searchRecursive(node *root, int key);
     node* searchIterative(int key);
     void destroyTree();
     void printTree(const node *root, int space);

@@ -44,8 +44,35 @@ void binaryTree::insert(int key){
     }
 }
 
-node* binaryTree::searchRecursive(int key){
+node* binaryTree::searchRecursive(node *root, int key){
+    node *current = root;
+    if(current == nullptr){
+        return nullptr;
+    }
+    else if(current->data == key){
+        return current;
+    }
+    else if(key > current->data){
+        return searchRecursive(current->right, key);
+    }
+    else{
+        return searchRecursive(current->left, key);
+    }
+}
 
+node* binaryTree::searchIterative(int key){
+     node *current = root;
+     while(current != nullptr){
+         if(current->data == key){
+            return current;
+         }
+         else if(key > current->data) {
+             current = current->right;
+         }
+         else{
+             current = current->left;
+         }
+     }
 }
 
 void binaryTree::printTree(const node *root, int space)
