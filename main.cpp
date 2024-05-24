@@ -31,8 +31,8 @@ int main(int argc, char const *argv[]){
         }
         auto end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> duration = end - start;
-        std::cout << "tempo de execução da construcao rec = " << duration.count() << " ms\n";
-        std::cout << "qtd de comparacoes na construcao rec = " << tree.construir_count << " ";
+        std::cout << tree.construir_count << " ";
+        std::cout << duration.count() << " ";
 
 
         // tree.printTree(tree.root, 0);
@@ -50,8 +50,8 @@ int main(int argc, char const *argv[]){
         }
         end = std::chrono::high_resolution_clock::now();
         duration = end - start;
-        std::cout << "tempo de execução da consulta rec = " << duration.count() << " ms\n";
-        std::cout << "qtd de comparacoes na consulta rec = " << tree.consulta_count << std::endl;
+        std::cout << tree.consulta_count << " ";
+        std::cout << duration.count() << " \n";
 
     }
     else if(rec_or_iter == 't') {
@@ -65,8 +65,8 @@ int main(int argc, char const *argv[]){
         }
         auto end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> duration = end - start;
-        std::cout << "tempo de execução da construcao iter = " << duration.count() << " ms\n";
-        std::cout << "qtd de comparacoes na construcao iter = " << tree.construir_count << std::endl;
+        std::cout << tree.construir_count << " ";
+        std::cout << duration.count() << " ";
 
         // tree.printTree(tree.root, 0);
 
@@ -84,8 +84,9 @@ int main(int argc, char const *argv[]){
         }
         end = std::chrono::high_resolution_clock::now();
         duration = end - start;
-        std::cout << "tempo de execução da consulta iter = " << duration.count() << " ms\n";
-        std::cout << "qtd de comparacoes na consulta iter = " << tree.consulta_count << std::endl;
+        std::cout << tree.consulta_count << " ";
+        std::cout << duration.count() << " \n";
+
 
     }
     else {

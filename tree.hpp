@@ -14,8 +14,8 @@ class binaryTree{
 
 public:
     node *root;
-    int construir_count = 0;
-    int consulta_count = 0;
+    long int construir_count = 0;
+    long int consulta_count = 0;
     binaryTree();
     ~binaryTree();
     bool isEmpty();
