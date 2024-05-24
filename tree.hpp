@@ -14,10 +14,13 @@ class binaryTree{
 
 public:
     node *root;
+    int construir_count = 0;
+    int consulta_count = 0;
     binaryTree();
     ~binaryTree();
     bool isEmpty();
-    void insert(int key);
+    void insertIter(int key);
+    node *insertRecur(node *root, int key);
     node *removeNode(int key); // ainda nao implementei
     node *minValueNode(node *node); // ainda nao implementei
     node* searchRecursive(node *root, int key);
